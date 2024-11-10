@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sneed DAO</title>
+    <meta name="description" content="The community-owned and driven SNS DAO on the Internet Computer Protocol. Sneed offers an accessible, open platform for creative and technological exploration.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="placeholder-favicon.ico" type="image/x-icon">
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Roboto Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <!-- Updated the logo link to scroll to top -->
+        <a href="#top" class="logo">
+            <img src="logos/logo.png" alt="Sneed DAO Logo">
+        </a>
+        <nav id="navbar">
+            <a href="#about">About</a>
+            <a href="#vision">Vision</a>
+            <div class="dropdown">
+                <a href="javascript:void(0);" class="dropdown-toggle">Projects</a>
+                <div class="dropdown-menu">
+                    <a href="#ecosystem">Sneed Token</a>                 
+                    <a href="#sneedscan">SneedScan</a>
+                    <a href="#sneedswap">SneedSwap</a>
+                    <a href="#sneed-diamond-club">Sneed Diamond Club</a>
+                    <a href="#sneedlock">SneedLock</a>
+                    <a href="#rll">Tokenomics: RLL Model</a>
+                    <a href="#i-sneed-you"><u>Your</u> Project</a>
+                </div>
+            </div>
+            <a href="#code">Code</a>
+            <a href="#treasury">Treasury</a>
+            <a href="#partnerships">Partnerships</a>
+
+            <!-- Join Button with Animated Border and Bold Text -->
+            <a href="#join" class="join-button"><strong>Join</strong></a>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Simplified Launch dApp Button -->
+        <a href="https://app.sneeddao.com" target="_blank" class="launch-button">Launch dApp</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="top">
+        <div class="hero-content">
+            <!-- Frontpage Image with Reduced Size -->
+            <img src="logos/frontpage-logo.png" alt="Sneed DAO" class="hero-image">
+            <p>The Blank Canvas SNS DAO</p>
+            <a href="#about">Learn More</a>
+        </div>
+        <div class="scroll-down"></div>
+    </section>
+
+    <div class="content" id="about">
+        <h2>About Sneed DAO</h2>
+        <p>A Decentralized Autonomous Organization (DAO) is an organization that is governed by its members. DAOs operate with rules encoded in smart contracts, which removes the need for centralized leadership (e.g., a CEO).</p>
+        <p>On the Internet Computer Protocol (ICP), decentralized applications (dApps) can be controlled by <a href="https://internetcomputer.org/docs/current/developer-docs/daos/sns/overview" target="_blank" class="highlight-link">SNS (Service Nervous System) DAOs</a>. SNS DAOs are advanced DAOs that operate entirely on the ICP blockchain, enabling dApp operation and maintenance fully within Web3 through a token-based governance system.</p>
+        <p><strong>Sneed DAO</strong> is a fully <strong>community-owned and community-driven</strong> SNS DAO on ICP, emerging from the <a href="https://nuance.xyz/sneeddao/6790-434go-diaaa-aaaaf-qakwq-cai/the-need-for-sneed-a-short-history-of-sneed-dao" target="_blank" class="highlight-link">legacy of SNS-1 (nicknamed "SNEED" by the community)</a>. It was designed as a customizable and open "Blank Canvas" dApp, with the goal of providing a self-sustaining platform for the ICP community to innovate and build. </p>
+        <p>Sneed DAO empowers its community members to propose, vote on, and develop any ideas, projects, partnerships, etc. There are no limits set. Sneed DAO aims to be an open and collaborative platform, inviting everyone—from developers and creatives to enthusiasts with ambitious ideas—to join, contribute, and build together.</p>
+        
+        <h2>What Makes Sneed DAO Special</h2>
+        <ul class="special-features">
+            <li><strong>Blank Canvas Model: Open Innovation</strong>
+                <p>An accessible platform for developers and enthusiasts to collaborate without constraints, free from the focus on a single main product.</p>
+            </li>
+            <li><strong>Community Governance</strong>
+                <p>All decisions are made collectively by token holders, ensuring that the community directs the future of the DAO.</p>
+            </li>
+            <li><strong>100% On-Chain Operations</strong>
+                <p>All activities are fully decentralized and transparent on the Internet Computer Protocol (ICP).</p>
+            </li>
+        </ul>
+    
+        <h2>Comparison Between Conventional Web2 DAOs and Sneed DAO</h2>
+        <div class="comparison-table">
+            <div class="column">
+                <h3>Conventional Web2 DAOs</h3>
+                <ul>
+                    <li><strong>Hosted on Web2 Servers</strong>
+                        <p>Reliance on centralized servers can lead to single points of failure, data leaks, and less user control.</p>
+                    </li>
+                    <li><strong>Limited Transparency</strong>
+                        <p>DAO Operations may not be fully transparent. They may be relying on centralized decision-makers, reducing trust among the community.</p>
+                    </li>
+                    <li><strong>Restricted Innovation</strong>
+                        <p>Focus on a single product limits collaborative opportunities and innovation.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Sneed DAO</h3>
+                <ul>
+                    <li><strong>100% Web3 Operation</strong>
+                        <p>Built entirely on the Internet Computer Protocol as an SNS DAO, ensuring decentralization.</p>
+                    </li>
+                    <li><strong>Full Transparency on ICP</strong>
+                        <p>All operations are transparent and verifiable on-chain.</p>
+                    </li>
+                    <li><strong>Community-Driven, Open Platform</strong>
+                        <p>Encourages open innovation and experimentation without constraints.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content" id="vision">
+        <h2>Vision</h2>
+        <!-- Blank Canvas Animation -->
+        <div class="canvas-container">
+            <canvas id="blankCanvas" width="600" height="400"></canvas>
+        </div>
+        <p>The main vision of Sneed DAO is that its community members shape the future of the DAO using an open-platform "Blank Canvas" approach, which is realized through a straightforward three-step process using the SNEED token:</p>
+        <ol class="vision-steps">
+            <li><strong>Proposal Submission:</strong> Community developers and members submit proposals for new projects, initiatives, or changes (for example on <a href="https://oc.app/community/aury7-ryaaa-aaaar-auzia-cai/channel/81003719287785947185360149666822395705" target ="_blank">OpenChat</a> or <a href="https://proposals.network/?g=fi3zi-fyaaa-aaaaq-aachq-cai" target ="_blank">Proposals.network)</a>. These proposals are then publicly votable on the <a href="https://nns.ic0.app/proposals/?u=fp274-iaaaa-aaaaq-aacha-cai" target ="_blank">NNS</a>.</li>
+            <li><strong>DAO Decision:</strong> SNEED token holders vote on proposals.</li>
+            <li><strong>DAO Action:</strong> Approved proposals are implemented, dApp code changes are directly, trustlessly made on-chain via the SNS.</li>
+        </ol>
+        <p>This "Blank Canvas" model stands for an "open call" to the ICP community for any kind of software development. Anyone can submit their proposal to the DAO. The future of Sneed DAO is 100% shaped by its decentralized community, which is in control of the DAO treasury and the DAO dApps.</p>
+        <p>For more details, read <a href="https://xb24g-dyaaa-aaaag-qcrmq-cai.icp0.io/" target="_blank">Mr. Sneed's Whiteletter to the Community.</a></p>
+    </div>
+    
+    <div class="content" id="ecosystem">
+        <h2>Projects</h2>
+        <p>Since the inception of Sneed DAO in October 2023 and the successful <a href="https://nns.ic0.app/proposal/?u=qoctq-giaaa-aaaaa-aaaea-cai&proposal=127066" target="_blank">transition</a> to an SNS DAO in January 2024, the community has been actively building on the "Blank Canvas" model. Below are some of the projects developed by the Sneed community so far:</p>
+    
+<!-- Sneed ICRC-1 Token -->
+<div class="content section-target" id="sneed-token">
+    <div class="project-header">
+        <img src="logos/sneedtoken.png" alt="Sneed ICRC-1 Token Logo" class="project-logo1">
+    </div>
+    <div class="project-description">
+        <p>The <a href="https://github.com/icsneed/sneed" target="_blank">Sneed token</a> is an implementation of Dfinity's ICRC1 standard, developed by the Sneed community. It enabled the direct addition of the token logo into the token canister. Since its release in October 2023, many ICP community projects ("memecoins") have forked this code base and used the Sneed ICRC1 standard.</p>
+        <p>A few selected ICP community tokens which have forked the Sneed ICRC1 standard include:</p>
+        <ul class="project-points">
+            <li><a href="https://www.windoge98.com" target="_blank">Windoge 98</a></li>
+            <li><a href="https://tendy.zone" target="_blank">Tendy</a></li>
+            <li><a href="https://idoge.org" target="_blank">Idoge</a></li>
+            <li><a href="https://insaneclownprotocol.com" target="_blank">Insane Clown Protocol</a></li>
+            <li><a href="https://oqvkf-bqaaa-aaaan-ql73a-cai.icp0.io/" target="_blank">Motokowifhat</a></li>
+        </ul>
+    </div>
+</div>
+
+    
+<!-- SneedScan -->
+<div class="content section-target" id="sneedscan">
+    <div class="project-header">
+        <img src="logos/sneedscan.png" alt="SneedScan Logo" class="project-logo2">
+    </div>
+    <div class="project-description">
+        <p>SneedScan is a blockchain indexer and explorer for the Sneed token, developed by the Sneed DAO community. It allows users to view transaction histories and monitor token activity, a feature typically missing for comparable ICRC-1 community tokens.</p> 
+        <p>SneedScan shows the Sneed vision in action: community-driven development and transparency.</p>
+    </div>
+</div>
+
+    	
+<!-- SneedSwap -->
+<div class="content section-target" id="sneedswap">
+    <div class="project-header">
+        <img src="logos/sneedswap.png" alt="SneedSwap Logo" class="project-logo2">
+    </div>
+    <div class="project-description">
+        <p>SneedSwap was developed by the Sneed DAO community ahead of its <a href="https://forum.dfinity.org/t/proposal-to-create-an-sns-dao-for-sneed/24975" target="_blank" class="highlight-link">SNS launch</a>. SneedSwap allows for a trustless and permissionless token swap of ICRC-1 tokens to SNS token standards.</p>
+        <p>It was <a href="https://github.com/icsneed/sneed_sns_dapp/tree/main/audit" target="_blank" class="highlight-link">audited</a> by RIVVIR Tech, LLC.</p>
+    </div>
+</div>
+
+    
+<!-- Sneed Diamond Club -->
+<div class="content section-target" id="sneed-diamond-club">
+    <div class="project-header">
+        <img src="logos/sdc.png" alt="Sneed Diamond Club Logo" class="project-logo2">
+    </div>
+    <div class="project-description">
+        <p>The Sneed Diamond Club is an exclusive holder's community within Sneed DAO and the first NFT-gated group that is synchronized between web2 (<a href="https://discord.gg/EvGWkbPNHS" target="_blank">Discord</a>) and web3 (<a href="https://catalyze.one/groups/Sneed-Diamond-Club" target="_blank">Catalyze</a>).</p>
+        
+        <p>50% of the NFT collection was airdropped to SNEED token holders (>1 SNEED holders received 2 each), while the other 50% is stored in the Sneed DAO treasury for future incentives.</p>
+        
+        <p>The collection is currently being traded on <a href="https://yuku.app/market/gjv36-laaaa-aaaah-adyza-cai" target="_blank">Yuku</a>. 100% of the 3% Creator's Royalty is automatically transferred to the Sneed DAO treasury.</p>
+    </div>
+</div>
+
+    
+<!-- SneedLock -->
+<div class="content section-target" id="sneedlock">
+    <div class="project-header">
+        <img src="logos/sneedlock.png" alt="SneedLock Logo" class="project-logo1">
+    </div>
+    <div class="project-description">
+        <p><a href="https://sneedlock.com" target="_blank">SneedLock 2.0</a> is a fully permissionless and trustless wallet on the ICP blockchain developed by the Sneed DAO community. It is the standalone dApp version of SneedLock 1.0, which is the first LP lock solution on ICP.</p>
+        <p>SneedLock 2.0 allows users (e.g., community token teams) to lock ICRC1 tokens and liquidity pools (LP) for specific durations.</p>
+        <p>SneedLock enhances security and trust within the ICP ecosystem by preventing access to locked tokens and/or LPs until the lock expires, helping to mitigate risks like "rug-pulls."</p>
+        <p>SneedLock is a modern alternative to "blackholing" LP positions, in which case the LP owners would forfeit claiming the LP rewards forever.</p>
+        <p>SneedLock supports an open API for integration with decentralized exchanges (DEXs) on ICP, with a primary focus on <a href="https://sneedlock.com" target="_blank">ICPSwap</a>.</p>
+        <p>SneedLock 2.0 is currently in <a href="https://pxtkg-giaaa-aaaal-ajjzq-cai.icp0.io" target="_blank">Beta</a>.</p>
+    </div>
+</div>
+
+    
+<!-- RLL Section -->
+<div class="content section-target" id="rll">
+<div class="rll-section">
+    <div class="rll-header">
+        <img src="logos/rll.png" alt="RLL Logo" class="project-logo6">
+        <h3>Sneed DAO Tokenomics: RLL Model</h3>
+    </div>
+    <div class="rll-content">
+        <div class="rll-description">
+            <p>The Recursive Liquidity Loop (RLL) is a model developed by the Sneed SNS DAO as an alternative to inflationary SNS tokens. The governance token of Sneed DAO (SNEED) is non-inflationary, meaning the total supply (10 000 SNEED) will never increase. Here is a short breakdown of how it works:</p>
+            
+            <p><strong>1. Burning/Distributing SNEED Tokens</strong><br>
+            Rewards generated in SNEED tokens from the Sneed DAO Liquidity Pools (LPs) are regularly burned (removed from circulation) and/or distributed to the Sneed DAO governance members. Sneed DAO proposals can change this ratio from 100% burned to 100% distributed. This burn/distribution process is a core part of the DAO's approach to managing the ecosystem because it avoids the issuance of new SNEED tokens.</p>
+            
+            <p><strong>2. Staking ICP Rewards</strong><br>
+            Rewards earned in ICP (Internet Computer Protocol) coins from the Sneed DAO LPs are staked in an 8-year neuron which is controlled by the DAO. This staking process helps the DAO participate in ICP's governance and earn additional rewards that support the DAO's activities.</p>
+            
+            <p><strong>3. Distributing Maturity Rewards from Staked ICP</strong><br>
+            As the staked ICP tokens generate returns, these are distributed back to the Sneed SNS DAO community as governance rewards. These governance rewards can then be spent on buying-back SNEED tokens and/or on the distribution to Sneed DAO governance members. This approach closes the RLL as buying-back SNEED tokens again generate rewards in Sneed DAO LPs.</p>
+            
+            <p>The RLL model is designed to minimize token inflation, helping to maintain the integrity of DAO votes and retain DAO self-sustainability. Launch the Sneed DAO dApp to see the RLL model in action!</p>
+        </div>
+        <img src="logos/rll-info.png" alt="RLL Infographic" class="rll-info" loading="lazy">
+    </div>
+</div>
+</div>
+
+
+        <!-- I Sneed You -->
+        <div class="content section-target" id="i-sneed-you">
+            <h3>Build Your Project with Sneed DAO</h3>
+            <img src="logos/i-sneed-you.png" alt="I Sneed You Logo" class="project-logo5">
+            <p>If you have an idea or project that aligns with the "Blank Canvas" vision, you are invited to build with Sneed DAO. </p>
+    		<p><a href="#vision">Submit your proposal</a>, collaborate with like-minded individuals, and bring your project to life on the ICP.</p>
+            <p>Whether you're a developer, designer, or enthusiast, your contributions can make an impact. Join Sneed DAO in offering necessary tools to the ICP ecosysem and shaping the future of decentralized applications on web3.</p>
+            <a href="#join" class="join-button">Get Involved</a>
+        </div>
+    </div>
+    
+    <div class="content" id="code">
+        <h2>Code</h2>
+        <div class="test-list">
+            
+            <!-- Line 1 -->
+            <div class="test-item">
+                <img src="logos/sneedtoken.png" alt="Sample 1 Image" class="line-image">
+                <div class="line-description">
+                    <p><strong>Sneed ICRC1 Token</strong> - The Sneed token smart contract is itself a fork of the <a href="https://github.com/NatLabs/icrc1" target="_blank">NatLabs reference implementation of the ICRC1 standard</a>. This means that tools that support the transaction history API from the NatLabs contract will also be able to support the Sneed token, and all its compliant, derivate forks.<br>
+    				The full code can be found on <a href="https://github.com/icsneed/sneed" target="_blank">GitHub</a>.</p>
+                </div>
+            </div>
+    
+            <!-- Line 2 (Larger Image) -->
+            <div class="test-item">
+                <img src="logos/sneedscan.png" alt="Sample 2 Image" class="line-image larger-image">
+                <div class="line-description">
+                    <p><strong>SneedScan</strong> - SneedScan is the Sneed token block explorer. It natively supports all forks of the Sneed token smart contract. <br>
+    				The full code can be found on <a href="https://github.com/icsneed/sneed_snoop" target="_blank">GitHub</a>.</p>
+                </div>
+            </div>
+    
+            <!-- Line 3 (Larger Image) -->
+            <div class="test-item">
+                <img src="logos/sneedlock1-logo.png" alt="Sample 3 Image" class="line-image larger-image">
+                <div class="line-description">
+                    <p><strong>SneedLock 1.0</strong> - SneedLock 1.0 supports the lock of any token or smart contract (canister) on the ICP blockchain. SneedLocked assets are safely secured by the Sneed SNS DAO. <br>
+    				For more information visit: <a href="https://xyjos-zqaaa-aaaag-ak7iq-cai.icp0.io/" target="_blank">SneedLock1.0 Information Page</a> and the SneedDeFi <a href="https://github.com/icsneed/sneed_defi" target="_blank">GitHub page</a></p>
+                </div>
+            </div>
+    
+            <!-- Line 4 -->
+            <div class="test-item">
+                <img src="logos/sneedlock.png" alt="Sample 4 Image" class="line-image">
+                <div class="line-description">
+                    <p><strong>SneedLock 2.0</strong> - The permissionless and trustless next-gen update to SneedLock 1.0, currently in beta.<br> 
+    				To test SneedLock 2.0 please visit the <a href="https://pxtkg-giaaa-aaaal-ajjzq-cai.icp0.io" target="_blank">official dApp</a>.</p>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+    
+    <div class="content" id="treasury">
+        <h2>Treasury</h2>
+        <!-- Ticker with Dynamic Data -->
+        <!-- Animated TVL Box -->
+        <div class="tvl-box">
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+                Treasury TVL: <strong>API coming soon</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Projects in SneedLock 1.0: <strong>6</strong>
+            </marquee>
+        </div>
+        <p>The Sneed DAO's <a href="https://toolkit.rem.codes/sns/fp274-iaaaa-aaaaq-aacha-cai/wallet/r7inp-6aaaa-aaaaa-aaabq-cai" target="_blank">Treasury</a> was raised during the <a href="https://nns.ic0.app/project/?project=fp274-iaaaa-aaaaq-aacha-cai" target="_blank">Decentralization Sale</a>.</p>
+        <p>The full SNS DAO treasury consists of:</p>
+        <ul class="treasury-points">
+            <li><strong>SNS DAO ICP Canister:</strong> Holds the ICP raised during the decentralization sale, alongside 16.4% of the SNEED token supply.</li>
+            <li><strong>Sneed DeFi Canister:</strong> Holds community tokens and assets locked in the first iteration of SneedLock. Visit the <a href="https://suemn-5aaaa-aaaap-qb62q-cai.icp0.io/sneed-lock" target="_blank">Bitcorn Explorer</a> for more information.</li>
+			<li><strong>Sneed DAO 8-yr ICP Neuron:</strong> The DAO furthermore controls an 8-yr neuron which receives the Sneed DAO LP rewards. Furthermore, the Sneed DAO treasury will be partly converted to the 8-yr neuron in the future (alongside the full release of the <a href="#rll">RLL dApp</a>).</li>
+        </ul>
+        <p>Sneed DAO decides through <a href="#vision">proposals</a> how treasury funds are managed (e.g., to incubate innovative ideas on ICP).</p>
+    </div>
+    
+    <div class="content" id="partnerships">
+        <h2>Partnerships & Collaborations</h2>
+        <div class="partnerships-container">
+            <!-- Neutrinite Partnership -->
+            <div class="partnership">
+                <img src="logos/neutrinite-logo.png" alt="Neutrinite Logo">
+                <div class="description">
+                    Sneed DAO partnered with Neutrinite to build the <a href="#rll" target="_blank">RLL dApp</a> on-chain, integrating Neutrinite vectors. <br>
+                    <a href="https://icpcoins.com/" target="_blank">Visit Neutrinite</a>
+                </div>
+            </div>
+            <!-- ICPSwap Partnership -->
+            <div class="partnership">
+                <img src="logos/icpswap-logo.png" alt="ICPSwap Logo">
+                <div class="description">
+                    Sneed DAO partnered with ICPSwap to integrate ICPSwap LP positions in <a href="#rll" target="_blank">SneedLock 2.0</a>, allowing for trustless and permissionless token and LP locks.<br>
+                    <a href="https://icpswap.com" target="_blank">Visit ICPSwap</a>
+                </div>
+            </div>
+    
+            <!-- Catalyze Partnership -->
+            <div class="partnership">
+                <img src="logos/catalyze-logo.png" alt="Catalyze Logo">
+                <div class="description">
+                    Sneed collaborated with Catalyze to create the first Web3 NFT-gated chat room, <a href="#sneed-diamond-club" target="_blank">Sneed Diamond Club</a> integrated with Discord.<br>
+                    <a href="https://catalyze.one" target="_blank">Visit Catalyze</a>
+                </div>
+            </div>
+    
+            <!-- OpenChat Partnership -->
+            <div class="partnership">
+                <img src="logos/openchat-logo.png" alt="OpenChat Logo">
+                <div class="description">
+                    Sneed was the first token added to OpenChat for tipping and is listed in the official token list.<br>
+                    <a href="https://openchat.icp0.io" target="_blank">Visit OpenChat</a>
+                </div>
+            </div>
+            
+            <!-- Fomowell Partnership -->
+            <div class="partnership">
+                <img src="logos/fomowell-logo.png" alt="Fomowell Logo">
+                <div class="description">
+                    Sneed DAO collaborated with Fomowell to integrate an automatic Sneed Lock feature for launched tokens.<br>
+                    <a href="https://fomowell.com" target="_blank">Visit Fomowell</a>
+                </div>
+            </div>
+    
+            <!-- ICPex Partnership -->
+            <div class="partnership">
+                <img src="logos/icpex-logo.png" alt="ICPex Logo">
+                <div class="description">
+                    Sneed DAO collaborated with ICPEx to integrate SneedLock 1.0 into their token launcher.<br>
+                    <a href="https://icpex.com" target="_blank">Visit ICPex</a>
+                </div>
+            </div>
+            
+            <!-- Bitcorn Labs Partnership -->
+            <div class="partnership">
+                <img src="logos/bitcorn-labs-logo.png" alt="Bitcorn Labs Logo">
+                <div class="description">
+                    Sneed DAO collaborated with Bitcorn Labs on ICP community dApps such as the Bitcorn Labs Sneedlock Explorer.<br>
+                    <a href="https://bitcornlabs.io" target="_blank">Visit Bitcorn Labs</a>
+                </div>
+            </div>
+            
+            <!-- Elna.ai Partnership -->
+            <div class="partnership">
+                <img src="logos/elna-logo.png" alt="Elna.ai Logo">
+                <div class="description">
+                    Sneed DAO partnered with ELNA.ai to build a Mr. Sneed AI agent, fully stored on-chain.<br>
+                    <a href="https://elna-ai.com" target="_blank">Visit Elna.ai</a>
+                </div>
+            </div>
+            
+            <!-- Taco DAO Partnership -->
+            <div class="partnership">
+                <img src="logos/tacodao-logo.png" alt="Taco DAO Logo">
+                <div class="description">
+                    Sneed DAO partnered with Taco DAO to work on future projects.<br>
+                    <a href="https://tacodao.com" target="_blank">Visit Taco DAO</a>
+                </div>
+            </div>
+        </div>
+    
+        <h2>SneedLocks and Forks</h2>
+        <div class="sneedlocks-container">
+            <!-- SneedLocks and Forks Section -->
+            <div class="partnership">
+                <img src="logos/snoge.png" alt="Snoge Logo">
+                <div class="description">Fork of the Sneed Token. 10% Sneedlocked LP, 50% governance rewards to Sneed DAO stakers, 40% airdrop to Sneed DAO holders. Official memecoin of Sneed DAO, as decided by Sneed DAO Motion Proposals #94 and #147.<br><a href="https://snoge.onrender.com" target="_blank">Visit Snoge</a></div>
+            </div>
+            <div class="partnership">
+                <img src="logos/tendy-logo.png" alt="Tendy Logo">
+                <div class="description">Fork of the Sneed Token.<br><a href="https://TENDY.zone" target="_blank">Visit TENDY.zone</a></div>
+            </div>
+            <div class="partnership">
+                <img src="logos/clown-logo.png" alt="Clown Logo">
+                <div class="description">Fork of the Sneed Token and SneedLocked LP.<br><a href="https://insaneclownprotocol.com/" target="_blank">Visit Insane Clown Protocol</a></div>
+            </div>
+            <div class="partnership">
+                <img src="logos/nd64-logo.png" alt="ND64 Logo">
+                <div class="description">SneedLocked LP.<br><a href="https://www.nintendoge64.com" target="_blank">Visit Nintendoge64</a></div>
+            </div>
+            <div class="partnership">
+                <img src="logos/windoge98-logo.png" alt="Windoge98 Logo">
+                <div class="description">Fork of the Sneed Token.<br><a href="https://www.windoge98.com" target="_blank">Visit Windoge98</a></div>
+            </div>
+            <div class="partnership">
+                <img src="logos/nanas-logo.png" alt="Nanas Logo">
+                <div class="description">Launched on Fomowell with SneedLocked LP.<br><a href="https://oc.app/community/t2js6-kyaaa-aaaaf-bmzwq-cai/channel/19856155011728060654159040910788482268" target="_blank">The Banana Company</a></div>
+            </div>
+            <div class="partnership">
+                <img src="logos/glaze-logo.png" alt="Glaze Logo">
+                <div class="description">SneedLocked LP.<br><a href="https://t.me/GLAZE_ICP" target="_blank">Visit $GLAZE</a></div>
+            </div>
+            <div class="partnership">
+                <img src="logos/mif-logo.png" alt="MIF Logo">
+                <div class="description">Fork of the Sneed Token. SneedLocked LP.<br><a href="https://oqvkf-bqaaa-aaaan-ql73a-cai.icp0.io/" target="_blank">Visit Motokowifhat</a></div>
+            </div>
+            <div class="partnership">
+                <img src="logos/dogmi-logo.png" alt="Dogmi Logo">
+                <div class="description">Fork of SneedSwap to exchange DOGMI (old) to DOGMI (SNS).<br><a href="https://qu2gy-uqaaa-aaaal-qcv6a-cai.icp0.io/" target="_blank">Visit DOGMI</a></div>
+            </div>
+            <div class="partnership">
+                <img src="logos/pepeonicp-logo.png" alt="Pepe Logo">
+                <div class="description">Fork of the Sneed Token. SneedLocked LP.<br><a href="https://realpepeicp.com/" target="_blank">Visit Pepe</a></div>
+            </div>
+            <div class="partnership">
+                <img src="logos/idoge-logo.png" alt="iDoge Logo">
+                <div class="description">Fork of the Sneed Token.<br><a href="https://idoge.org" target="_blank">Visit Internet Doge</a></div>
+            </div>
+            <div class="partnership">
+                <img src="logos/alien-logo.png" alt="Alien Logo">
+                <div class="description">Fork of the Sneed Token. SneedLocked LP. Airdrop to ICPCC 2024 conference attendees.<br><a href="https://x.com/icp_cc" target="_blank">Visit ICP Community Conference</a></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Join Section with Updated Background -->
+    <div class="join-section" id="join">
+        <h2>Join Sneed DAO</h2>
+        <div class="join-links">
+            <a href="https://nns.ic0.app/proposals/?u=fp274-iaaaa-aaaaq-aacha-cai" target="_blank">
+                <img src="icons/nns.png" alt="NNS Icon">
+                NNS
+            </a>
+            <a href="https://discord.gg/EvGWkbPNHS" target="_blank">
+                <img src="icons/discord.png" alt="Discord Icon">
+                Discord
+            </a>
+            <a href="https://oc.app/community/aury7-ryaaa-aaaar-auzia-cai/channel/65683588108753554033131868669970869919" target="_blank">
+                <img src="icons/openchat.png" alt="OpenChat Icon">
+                OpenChat
+            </a>
+            <a href="https://catalyze.one/groups/Sneed-Diamond-Club" target="_blank">
+                <img src="icons/catalyze.png" alt="Catalyze Icon">
+                Catalyze
+            </a>
+            <a href="https://catalyze.one/groups/Sneed-Diamond-Club" target="_blank">
+                <img src="icons/diamondclub.png" alt="Sneed Diamond Club Icon">
+                Sneed Diamond Club
+            </a>
+            <a href="https://twitter.com/icsneed" target="_blank">
+                <img src="icons/twitter.png" alt="Twitter Icon">
+                Twitter
+            </a>
+            <a href="https://github.com/icsneed" target="_blank">
+                <img src="icons/github.png" alt="GitHub Icon">
+                GitHub
+            </a>
+        </div>
+        <!-- Further Resources Section -->
+        <h3>Further Links</h3>
+        <div class="resources">
+            <div class="resource-column">
+                <h4>Web3</h4>
+                <ul>
+                    <li><a href="https://info.icpswap.com/token/details/hvgxa-wqaaa-aaaaq-aacia-cai" target="_blank">ICPSwap</a></li>
+                    <li><a href="https://data.sonic.ooo/tokens/hvgxa-wqaaa-aaaaq-aacia-cai" target="_blank">Sonic</a></li>
+                    <li><a href="https://iclight.io/ICDex/sneed/icp" target="_blank">ICLight</a></li>
+                    <li><a href="https://icpcoins.com/#/token/SNEED" target="_blank">ICPCoins</a></li>
+                    <li><a href="https://xjwoo-pqaaa-aaaak-afc3a-cai.icp0.io" target="_blank">SneedScan</a></li>
+                </ul>
+            </div>
+            <div class="resource-column">
+                <h4>Web2</h4>
+                <ul>
+                    <li><a href="https://coinmarketcap.com/currencies/sneed/" target="_blank">CoinMarketCap</a></li>
+					<li><a href="https://forum.dfinity.org/t/proposal-to-create-an-sns-dao-for-sneed/24975" target="_blank">Sneed DAO SNS Proposal</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-notification">
+        <img src="logos/icp-logo.png" alt="Internet Computer Logo" class="icp-logo">
+        <span></span>
+    </div>
+    <div class="footer-links">
+        <a href="javascript:void(0);" onclick="toggleDisclaim()">Disclaimer</a>
+    </div>
+    <div class="footer-content">
+        &copy; 2024 Built with ❤️ by Sneed DAO
+    </div>
+</footer>
+ 
+<!-- Disclaimer Modal -->
+<div id="disclaimer-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="toggleModal()">&times;</span>
+        <h2>Disclaimer</h2>
+        <!-- Insert your disclaimer content here -->
+        <p><strong>Last Updated:</strong> November 2024</p>
+<h3>Introduction</h3>
+            <p>The information provided on this website ("<strong>Site</strong>") operated by Sneed DAO ("<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>") is for general informational purposes only. All information on the Site is provided in good faith; however, we make no representations or warranties of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Site.</p>
+            <p>By accessing or using the Site, you agree to this Disclaimer. If you do not agree with this Disclaimer, you should not access or use the Site.</p>
+
+            <h3>No Financial Advice</h3>
+            <p>Nothing on this Site constitutes or is intended to constitute:</p>
+            <ul class="disclaimer-list">
+                <li>An offer or solicitation to purchase or sell any securities, financial instruments, or other investment products.</li>
+                <li>Financial, investment, legal, tax, or professional advice.</li>
+            </ul>
+            <p>You should not consider any content on the Site as a substitute for professional financial advice. We strongly recommend that you consult with a qualified financial advisor or other professional advisors before making any investment decisions.</p>
+
+            <h3>Risk Disclosure</h3>
+            <p>Investing in cryptocurrencies, tokens, and decentralized finance ("<strong>DeFi</strong>") projects involves significant risks, including but not limited to:</p>
+            <ul class="disclaimer-list">
+                <li><strong>Market volatility:</strong> The value of cryptocurrencies and tokens can be extremely volatile and may fluctuate significantly over short periods.</li>
+                <li><strong>Loss of capital:</strong> You may lose all or a substantial portion of your investment.</li>
+                <li><strong>Regulatory risks:</strong> Changes in laws or regulations can adversely affect the use, transfer, exchange, and value of cryptocurrencies and tokens.</li>
+                <li><strong>Technical risks:</strong> Blockchain technologies are subject to cybersecurity risks, system failures, and other technical issues.</li>
+            </ul>
+            <p>You acknowledge and agree that you are solely responsible for evaluating the risks and merits associated with the use of any information or content on the Site before making any decisions based on such information or content.</p>
+
+            <h3>Regulatory Compliance</h3>
+            <p>You are responsible for understanding and complying with all laws, rules, and regulations that may apply to your activities. Without limiting the foregoing:</p>
+            <ul class="disclaimer-list">
+                <li>We make no representation that the content or materials on the Site are appropriate or available for use in all jurisdictions.</li>
+                <li>Accessing the Site from territories where its content is illegal is prohibited.</li>
+                <li>We do not guarantee that our projects comply with the laws and regulations of any particular jurisdiction.</li>
+            </ul>
+
+            <h3>Limitation of Liability</h3>
+            <p>To the maximum extent permitted by applicable law, in no event shall Sneed DAO, its members, affiliates, directors, officers, employees, agents, or representatives be liable for any direct, indirect, incidental, special, consequential, or exemplary damages arising out of or in connection with your access or use of, or inability to access or use, the Site or any content provided on the Site.</p>
+            <p>This includes, but is not limited to, any loss of profits, loss of data, loss of goodwill, business interruption, or other intangible losses, even if we have been advised of the possibility of such damages.</p>
+
+            <h3>No Warranty</h3>
+            <p>The Site and all information, content, materials, and services included on or otherwise made available to you through the Site are provided on an "<strong>as is</strong>" and "<strong>as available</strong>" basis. We make no warranties or representations of any kind, express or implied, as to the operation of the Site or the information, content, materials, or services included on or otherwise made available to you through the Site.</p>
+            <p>We do not warrant that the Site will be uninterrupted, error-free, secure, or free from viruses or other harmful components.</p>
+
+            <h3>Third-Party Links</h3>
+            <p>The Site may contain links to third-party websites or services that are not owned or controlled by Sneed DAO. We have no control over, and assume no responsibility for:</p>
+            <ul class="disclaimer-list">
+                <li>The content, privacy policies, or practices of any third-party websites or services.</li>
+                <li>Any loss or damage that may arise from your use of them.</li>
+            </ul>
+            <p>You acknowledge and agree that we shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such websites or services.</p>
+            <p>We strongly advise you to read the terms and conditions and privacy policies of any third-party websites or services that you visit.</p>
+
+            <h3>Intellectual Property</h3>
+            <p>All content and materials on the Site, including but not limited to text, graphics, logos, images, software, and trademarks, are the property of Sneed DAO or its content suppliers and are protected by applicable intellectual property laws.</p>
+            <p>Unauthorized use of any content or materials may violate copyright, trademark, and other laws. You may not:</p>
+            <ul class="disclaimer-list">
+                <li>Reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on the Site.</li>
+                <li>Use any illustrations, photographs, video or audio sequences, or any graphics separately from the accompanying text.</li>
+            </ul>
+            <p>Permission is granted to temporarily download one copy of the materials on the Site for personal, non-commercial transitory viewing only.</p>
+
+            <h3>Forward-Looking Statements</h3>
+            <p>The Site may contain forward-looking statements, including statements regarding our expectations, beliefs, intentions, or strategies for the future. These statements are based on current expectations and are subject to risks and uncertainties that could cause actual results to differ materially.</p>
+            <p>Factors that could cause actual results to differ include, but are not limited to:</p>
+            <ul class="disclaimer-list">
+                <li>Changes in market conditions.</li>
+                <li>Technological developments.</li>
+                <li>Regulatory changes.</li>
+            </ul>
+            <p>We undertake no obligation to update or revise any forward-looking statements, whether as a result of new information, future events, or otherwise.</p>
+
+            <h3>Indemnification</h3>
+            <p>You agree to indemnify, defend, and hold harmless Sneed DAO, its members, affiliates, directors, officers, employees, agents, and representatives from and against any and all claims, liabilities, damages, losses, or expenses, including reasonable attorneys' fees and costs, arising out of or in any way connected with:</p>
+            <ul class="disclaimer-list">
+                <li>Your access to or use of the Site.</li>
+                <li>Your violation of this Disclaimer.</li>
+                <li>Your infringement of any third-party rights, including intellectual property rights.</li>
+            </ul>
+
+            <!-- Removed Governing Law and Jurisdiction Section -->
+
+            <h3>Changes to This Disclaimer</h3>
+            <p>We reserve the right, at our sole discretion, to modify or replace this Disclaimer at any time. Any changes will be effective immediately upon posting the revised Disclaimer on the Site. It is your responsibility to review this Disclaimer periodically for changes.</p>
+            <p>Your continued access or use of the Site after any such changes constitutes your acceptance of the new Disclaimer. If you do not agree to the new Disclaimer, you are no longer authorized to use the Site.</p>
+
+            <h3>Acceptance of Terms</h3>
+            <p>By accessing or using the Site, you acknowledge that you have read, understood, and agree to be bound by this Disclaimer and all terms incorporated herein by reference. If you do not agree to this Disclaimer, you should not access or use the Site.</p>
+
+            <h3>Contact Us</h3>
+            <p>If you have any questions about this Disclaimer, please use the contact links in the Join section of the main website page.</p>
+        </div>
+</div>
+
+<!-- External JavaScript -->
+<script src="script.js" type="module"></script>
+<script language="javascript">
+
+// Function to toggle the modal visibility
+function toggleDisclaim() {
+    const modal = document.getElementById('disclaimer-modal');
+    modal.style.display = (modal.style.display === 'block') ? 'none' : 'block';
+}
+
+</script>
+</body>
+</html>

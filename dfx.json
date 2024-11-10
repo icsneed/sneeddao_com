@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "sneeddao_com_backend": {
+      "main": "src/sneeddao_com_backend/main.mo",
+      "type": "motoko"
+    },
+    "sneeddao_com_frontend": {
+      "dependencies": [
+        "sneeddao_com_backend"
+      ],
+      "source": [
+        "src/sneeddao_com_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "sneeddao_com_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

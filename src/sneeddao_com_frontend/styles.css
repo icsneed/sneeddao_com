@@ -1,0 +1,1329 @@
+/* Apply box-sizing globally */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Main Content Area */
+main {
+    flex: 1;
+}
+
+/* Justify text globally */
+p, ul, li {
+    text-align: justify;
+}
+
+/* Center align specific headings */
+#vision h2, .hero-content p, .content h2 {
+    text-align: center;
+}
+
+/* Links in the content */
+.content a {
+    color: inherit;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.content a:hover {
+    color: #00BFFF; /* Slight color change on hover */
+}
+
+/* Retain default styles for other links */
+a {
+    color: #333333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.join-button:hover {
+    text-decoration: none;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header img {
+    height: 40px;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Spacing between links */
+}
+
+nav a {
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    white-space: nowrap;
+    position: relative;
+}
+
+nav a:not(.join-button)::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}
+
+nav a:not(.join-button):hover::after {
+    width: 100%;
+}
+
+/* Join Button Styles with Animated Border and Bold Text */
+.join-button {
+    margin-left: 20px;
+    padding: 10px 20px;
+    position: relative;
+    color: #ffffff;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Animated Border Effect */
+.join-button::before,
+.join-button::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid #ffffff;
+    transition: width 0.3s;
+    box-sizing: border-box;
+}
+
+.join-button::before {
+    border-right: none;
+    border-top: none;
+}
+
+.join-button::after {
+    border-left: none;
+    border-bottom: none;
+    right: 0;
+    left: auto;
+}
+
+.join-button:hover::before,
+.join-button:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+}
+
+.join-button:hover {
+    border: 2px solid #ffffff;
+}
+
+/* Simplified Styles for Launch dApp Button */
+.launch-button {
+    position: relative;
+    padding: 12px 25px;
+    margin-left: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none; /* Ensure no underline by default */
+    overflow: hidden;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #00aaff, #e52e71, #ff8a00);
+    background-size: 200% 200%;
+    animation: gradientBG 20s ease infinite;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.launch-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-decoration: none; /* Prevent underline on hover */
+}
+
+/* If there's a general rule causing underlines on hover, override it */
+.launch-button:link,
+.launch-button:visited,
+.launch-button:hover,
+.launch-button:active {
+    text-decoration: none;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Adjustments for Mobile Navigation */
+@media (max-width: 960px) {
+    nav a {
+        margin: 15px 0;
+        font-size: 18px;
+    }
+    nav a.launch-button, nav a.join-button {
+        margin-left: 0;
+    }
+}
+
+/* Ensure the new button doesn't overlap on smaller screens */
+@media (max-width: 600px) {
+    .launch-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+/* Responsive Navigation */
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Code List Styles */
+.code-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between code items */
+    padding: 20px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Individual code item styling */
+.code-item {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;    /* Center align items */
+    gap: 10px;              /* Space between image and description */
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Standard image size */
+.standard-size {
+    width: 100px;
+    height: auto;
+}
+
+/* Smaller image size for specific items */
+.small-size {
+    width: 80px;
+    height: auto;
+}
+
+/* Description styling */
+.description {
+    color: #333;
+    text-align: center;     /* Center align text */
+}
+
+.description p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.description a {
+    color: #1E90FF;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.description a:hover {
+    text-decoration: underline;
+}
+
+/* Container for the list of code items */
+.code-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* General content styling */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Title styling */
+.content h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container for each line */
+.test-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Styling for each line (image + description) */
+.test-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Standard image size */
+.line-image {
+    width: 80px;
+    height: auto;
+}
+
+/* Larger image size for specific items */
+.larger-image {
+    width: 200px; /* Increase size here */
+    height: auto;
+}
+
+/* Description styling */
+.line-description {
+    flex: 1;
+}
+
+.line-description p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+@media (max-width: 960px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    nav a {
+        margin: 15px 0;
+        font-size: 18px;
+    }
+
+    .header-content {
+        justify-content: space-between;
+    }
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    padding-right: 10px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000;
+    text-align: left;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    text-decoration: underline; /* Only underline text on hover */
+    background-color: transparent; /* No background color change */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Fix overlapping issue */
+#navbar a, .dropdown-toggle {
+    margin-right: 15px;
+}
+
+/* Section Target Adjustment */
+.section-target {
+    padding-top: 120px; /* Set this to the height of your fixed header */
+    margin-top: -120px; /* Negative margin to counteract the added padding */
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+    background: linear-gradient(to bottom, #000000 85%, #ffffff 100%);
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.hero-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    margin: -80px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.hero a {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero a:hover {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* Scroll Down Indicator */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: translateX(-50%) rotate(-45deg);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) rotate(-45deg) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) rotate(-45deg) translateY(10px);
+    }
+    60% {
+        transform: translateX(-50%) rotate(-45deg) translateY(5px);
+    }
+}
+
+/* Content Styles */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 20px 50px;
+}
+
+.content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.content p {
+    margin-bottom: 20px;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Special Features List */
+.special-features {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+/* Vision Steps */
+.vision-steps {
+    list-style-type: none;
+    counter-reset: step-counter;
+    margin-bottom: 40px;
+    padding-left: 0;
+}
+
+.vision-steps li {
+    counter-increment: step-counter;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+.vision-steps li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #787675;
+}
+
+/* Comparison Table */
+.comparison-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.comparison-table .column {
+    width: 48%;
+    background-color: #f7f7f7;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.comparison-table h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.comparison-table ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    display: inline-block;
+}
+
+/* Canvas Animation Styles */
+.canvas-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+#blankCanvas {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+/* Ticker Styles */
+.tvl-box {
+    background-color: #000000;
+    padding: 15px 0;
+    margin-bottom: 40px;
+    color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tvl-box #ticker {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tvl-box strong {
+    color: #00BFFF;
+}
+
+.partnerships-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    gap: 0px;
+    justify-items: center;
+    margin-top: 0px; /* Adjust value as needed */
+    margin-bottom: 20px;
+    padding: 20px 0;
+}
+
+.partnership {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.partnership img {
+    width: 65%;
+    height: 65%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.partnership:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Description Overlay */
+.partnership .description, 
+.code-item .description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 10px; /* Adjust padding for better fit */
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+    line-height: 1.4;
+    box-sizing: border-box; /* Include padding within the box size */
+    max-height: 100%; /* Prevents overflow beyond container */
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically */
+    overflow-y: auto; /* Allows scrolling if the text is too long */
+}
+
+/* Ensure overlay appears only on hover */
+.partnership:hover .description,
+.code-item:hover .description {
+    opacity: 1; /* Show description on hover */
+}
+
+.partnership .description a,
+.code-item .description a {
+    color: #00BFFF; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px; /* Space between text and link */
+}
+
+.partnership .description a:hover,
+.code-item .description a:hover {
+    text-decoration: underline;
+}
+
+.sneedlocks-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    gap: 0px;
+    justify-items: center;
+    margin-top: 20px; /* Adjust value as needed */
+    padding: 10px 0;
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .partnerships-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .partnerships-container {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}
+
+/* Projects List */
+.project-logo1{
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.project-logo2{
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.project-logo3{
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.project-logo4{
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.project-logo5 {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.section-target {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.project p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.project-points {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    display: inline-block;
+}
+
+/* Ticker Styles */
+.tvl-box {
+    background-color: #000000;
+    padding: 10px 0;
+    margin-bottom: 40px;
+    color: #ffffff;
+    overflow: hidden;
+    position: relative;
+}
+
+.tvl-box marquee {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tvl-box strong {
+    color: #00BFFF;
+}
+
+/* Join Section */
+.join-section {
+    padding: 80px 20px 150px;
+    text-align: center;
+    background: white;
+    color: #000000;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    scroll-margin-top: 60px;
+}
+
+.join-section::before {
+    content: '';
+    display: block;
+    height: 60px;
+    margin-top: -60px;
+}
+
+.join-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.join-section p {
+    margin-bottom: 20px;
+}
+
+.join-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.join-links a {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.join-links a img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.join-links a:hover {
+    color: #00BFFF;
+}
+
+/* Resources Section */
+.resources {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -50px;
+}
+
+.resource-column {
+    width: 200px;
+    margin: 20px;
+}
+
+.resource-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.resource-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resource-column ul li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.resource-column ul li a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.resource-column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+.footer {
+    width: 100%;
+    background: linear-gradient(to bottom, #ffffff, #000000);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+}
+
+.footer-notification {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #cccccc;
+}
+
+.footer-notification .icp-logo {
+    height: 35px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-notification .icp-logo:hover {
+    transform: scale(1.1);
+}
+
+.footer-links a {
+    color: #00BFFF;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #00aaff;
+}
+
+.footer-content {
+    font-size: 0.875rem;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    header img {
+        height: 30px;
+    }
+    .hero-image {
+        max-width: 300px;
+        margin: -50px auto 0;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+    .hero a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    .content {
+        padding: 60px 15px 40px;
+    }
+    .comparison-table {
+        flex-direction: column;
+    }
+    .comparison-table .column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .comparison-table ul {
+        text-align: left;
+    }
+    .project {
+        margin-bottom: 40px;
+    }
+    .join-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .join-links a {
+        margin: 10px 0;
+    }
+    .animated-vector {
+        width: 100%;
+        max-width: 300px;
+    }
+    .resources {
+        flex-direction: column;
+        align-items: center;
+    }
+    .resource-column {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+/* Project Header (Logo + Title) */
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.project-logo {
+    max-width: 150px;
+}
+
+.project-header h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Project Description */
+.project-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    header img {
+        height: 30px;
+    }
+    .hero-image {
+        max-width: 250px;
+        margin: -40px auto 0;
+    }
+    .hero p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    .hero a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .content {
+        padding: 60px 10px 40px;
+    }
+    .content h2 {
+        font-size: 28px;
+    }
+    .content p {
+        font-size: 14px;
+    }
+    .comparison-table {
+        flex-direction: column;
+    }
+    .comparison-table .column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .comparison-table ul {
+        text-align: left;
+    }
+
+    .project-logo1 {
+        width: 50px;
+    }
+	.project-logo2 {
+        width: 50px;
+    }
+		.project-logo3 {
+        width: 100px;
+    }
+    .join-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .join-links a {
+        margin: 10px 0;
+    }
+    .animated-vector {
+        width: 100%;
+        max-width: 280px;
+    }
+    .resources {
+        flex-direction: column;
+        align-items: center;
+    }
+    .resource-column {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .tokenomics-explanation h3 {
+        font-size: 24px;
+    }
+    .tokenomics-explanation li {
+        font-size: 14px;
+    }
+}
+/* Main section styling for centering */
+.rll-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header with logo and title side by side */
+.rll-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.project-logo6 {
+    max-width: 75px;
+}
+
+.rll-header h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Content styling for layout and spacing */
+.rll-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Description section */
+.rll-description {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Description subheadings */
+.rll-description p strong {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Infographic styling */
+.rll-info {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+}
+
+
+
+	
+/* Responsive Adjustments for Medium Screens */
+@media (max-width: 960px) and (min-width: 601px) {
+    .hero-content {
+        padding: 0 15px;
+    }
+    .hero-image {
+        max-width: 350px;
+        margin: -60px auto 0;
+    }
+    .hero p {
+        font-size: 20px;
+    }
+    .hero a {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+    .content {
+        padding: 70px 15px 45px;
+    }
+    .comparison-table .column {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+    .project-logo1,
+    .project-logo2,
+    .project-logo3,
+    .project-logo4,
+    .project-logo5 {
+        width: 180px;
+    }
+    .join-links a {
+        margin: 10px 15px;
+    }
+    .animated-vector {
+        width: 80%;
+        max-width: 600px;
+    }
+    .resource-column {
+        width: 45%;
+        margin: 20px;
+    }
+}
+
+/* Adjust navigation for medium screens */
+@media (max-width: 960px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav.show {
+        display: flex;
+    }
+    nav a {
+        margin: 15px 0;
+        font-size: 18px;
+    }
+    .header-content {
+        justify-content: space-between;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 50px auto;
+    padding: 20px;
+    border: none;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 8px;
+    position: relative;
+    color: #333333;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close-button {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.modal h3 {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.modal p,
+.modal ul {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.modal ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+        margin: 30px auto;
+        padding: 15px;
+    }
+    .modal h2 {
+        font-size: 24px;
+    }
+    .modal h3 {
+        font-size: 20px;
+    }
+    .modal p,
+    .modal ul {
+        font-size: 14px;
+    }
+}
